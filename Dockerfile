@@ -10,5 +10,5 @@ RUN --mount=type=cache,target=/root/.cache/pip \
 COPY . /app
 
 # ENTRYPOINT ["python3"]
-CMD ["gunicorn", "-w", "4", "-b", "0.0.0.0", "app:app"]
+CMD ["gunicorn", "-b", "0.0.0.0", "app:app"]
 EXPOSE 8000
